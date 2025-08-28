@@ -3,7 +3,8 @@ from workout_api.contrib.models import BaseModel
 from sqlalchemy.orm import mapped_column, relationship, Mapped
 from sqlalchemy import DateTime, Float, Integer, String, ForeignKey
 
-class AtletaModel(BaseModel)
+
+class AtletaModel(BaseModel):
     __tablename__ = "atletas"
     pk_id: Mapped[int] = mapped_column(Integer, primary_key=True)
     nome: Mapped[str] = mapped_column(String(50), nullable=False)
@@ -13,7 +14,9 @@ class AtletaModel(BaseModel)
     altura: Mapped[float] = mapped_column(Float, nullable=False)
     sexo: Mapped[str] = mapped_column(String(1), nullable=False)
     create_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
-    categoria: Mapped["CategoriaModel"] = relationship(back_populates='atleta')
-    categoria_id = Mapped[int] = mapped_column(ForeignKey['categorias.pk_id'])
-    categoria: Mapped["CentroTreinamentoModel"] = relationship(back_populates='atleta')
-    centro_treinamento_id = Mapped[int] = mapped_column(ForeignKey['centros_treinamento.pk_id'])
+    categoria: Mapped["CategoriaModel"] = relationship(back_populates="atleta")
+    categoria_id: Mapped[int] = mapped_column(ForeignKey("categorias.pk_id"))
+    categoria: Mapped["CentroTreinamentoModel"] = relationship(back_populates="atleta")
+    centro_treinamento_id: Mapped[int] = mapped_column(
+        ForeignKey("centros_treinamento.pk_id")
+    )
