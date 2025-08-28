@@ -1,0 +1,77 @@
+# ==========================
+# Arquivos do sistema
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Ambientes virtuais Python
+# ==========================
+venv/
+env/
+.venv/
+ENV/
+
+# ==========================
+# Arquivos Python desnecessários
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+debug.log
+
+# ==========================
+# Arquivos temporários e caches
+# ==========================
+*.tmp
+*.swp
+*.bak
+.cache/
+*.pid
+*.seed
+
+# ==========================
+# Arquivos de IDEs e Editores
+# ==========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ==========================
+# Arquivos de dependências
+# ==========================
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ==========================
+# Banco de dados local
+# ==========================
+*.sqlite3
+*.db
+*.sql
+
+# ==========================
+# Docker
+# ==========================
+*.pid
+*.seed
+docker-compose.override.yml
+.env
+
+# ==========================
+# Outros
+# ==========================
+*.tar
+*.zip
+*.rar
